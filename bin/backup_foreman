@@ -144,6 +144,8 @@ class ForemanBackup:
                     resource_function=self.foreman.get_subnets)
         self.backup(resource_type='users',
                     resource_function=self.foreman.get_users)
+        self.backup(resource_type='auth_source_ldaps',
+                    resource_function=self.foreman.get_auth_source_ldaps)
         if self.katello_support:
             self.backup(resource_type='locations',
                         resource_function=self.foreman.get_locations)
